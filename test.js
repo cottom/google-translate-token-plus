@@ -11,16 +11,16 @@ const browser = require('webdriverio').remote({
     }
 });
 
-const token = require('./index')('cn');
+const token = require('./index')();
 
 const getToken = token.get;
 
-test('check if what we generate equals to what translate.google.cn generates', async t => {
+test('check if what we generate equals to what translate.google.com generates', async t => {
     try {
         const token = await getToken('hello');
         const returned = await browser
             .init()
-            .url('http://translate.google.cn')
+            .url('http://translate.google.com')
             .timeoutsAsyncScript(10000)
             .executeAsync((tokenName, callback) => {
                 setTimeout(function () {
