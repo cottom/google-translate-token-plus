@@ -31,5 +31,4 @@ token.get('Hello').then(console.log);
 ```
 
 ## Related
-
 - [`google-translate-api-plus`](https://github.com/jerry-i/google-translate-api-plus) – A **free** and **unlimited** API for Google Translate :dollar::no_entry_sign:
