@@ -3,8 +3,8 @@ import test from 'ava';
 const browser = require('webdriverio').remote({
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
-    host: 'localhost',
-    port: 4445,
+    host: 'ondemand.saucelabs.com',
+    port: 80,
     desiredCapabilities: {
         'browserName': 'chrome',
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER
