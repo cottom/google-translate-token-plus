@@ -124,9 +124,7 @@ function get(text) {
 function token(net) {
     net = net || 'com';
     url = `https://translate.google.${net}`;
-    return {
-        get
-    };
+    return { get: get };
 }
 
 module.exports = token;
