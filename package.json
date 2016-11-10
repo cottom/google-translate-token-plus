@@ -1,14 +1,14 @@
 {
-  "name": "google-translate-token",
+  "name": "google-translate-token-plus",
   "version": "1.0.0",
-  "description": "A package that generates the necessary token to use the Google Translate API for free",
+  "description": "A package that generates the necessary token to use the Google Translate API for free ,supprting CHINA country",
   "main": "index.js",
   "scripts": {
     "test": "xo && ava"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matheuss/google-translate-tk.git"
+    "url": "git+https://github.com/jerry-i/google-translate-token-plus.git"
   },
   "keywords": [
     "translate",
@@ -22,15 +22,13 @@
     "token"
   ],
   "author": {
-    "name": "Matheus Fernandes",
-    "email": "npm@matheus.top",
-    "url": "http://matheus.top"
+    "email": "jerry-i@outlook.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jerry-i/google-translate-tk/issues"
+    "url": "https://github.com/jerry-i/google-translate-token-plus/issues"
   },
-  "homepage": "https://github.com/jerry-i/google-translate-tk#readme",
+  "homepage": "https://github.com/jerry-i/google-translate-token-plus#readme",
   "dependencies": {
     "configstore": "^2.0.0",
     "got": "^6.3.0"

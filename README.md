@@ -1,12 +1,12 @@
-# google-translate-token [![Build Status](https://travis-ci.org/jerry-i/google-translate-token.svg?branch=master)](https://travis-ci.org/jerry-i/google-translate-token) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![Known Vulnerabilities](https://snyk.io/test/github/jerry-i/google-translate-token/badge.svg)](https://snyk.io/test/github/jerry-i/google-translate-token)
+# google-translate-token-plus [![Build Status](https://travis-ci.org/jerry-i/google-translate-token.svg?branch=master)](https://travis-ci.org/jerry-i/google-translate-token-plus) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![Known Vulnerabilities](https://snyk.io/test/github/jerry-i/google-translate-token-plus/badge.svg)](https://snyk.io/test/github/jerry-i/google-translate-token-plus)
 
-A package that generates the necessary token to use the [**Google Translate API for free** :dollar::no_entry_sign:](https://github.com/matheuss/google-translate-api)
+A package that generates the necessary token to use the [**Google Translate API for free** :dollar::no_entry_sign:](https://github.com/jerry-i/google-translate-api-plus)
 
 ## Why
 
 [translate.google.com](https://translate.google.com) uses a token to authorize the requests. If you are not Google, you do not have this token and will have to [pay $20 per 1 million characters of text](https://cloud.google.com/translate/v2/pricing).
 457
-This package is the [result](https://github.com/matheuss/google-translate-token/blob/master/index.js#L12-110) of reverse engineering on the [obfuscated and minified code](https://translate.google.com/translate/releases/twsfe_w_20160620_RC00/r/js/desktop_module_main.js) used by Google to generate such token.
+This package is the [result](https://github.com/jerry-i/google-translate-token-plus/blob/master/index.js#L12-110) of reverse engineering on the [obfuscated and minified code](https://translate.google.com/translate/releases/twsfe_w_20160620_RC00/r/js/desktop_module_main.js) used by Google to generate such token.
 
 ## How it works
 
@@ -24,7 +24,7 @@ npm install --save google-translate-token-plus
 ``` js
 // here  net is not required, can be 'cn', 'com', default is 'com', but 'cn' would be friendly to CHINA
 const net = 'cn';
-const token = require('google-translate-token')(net);
+const token = require('google-translate-token-plus')(net);
 
 token.get('Hello').then(console.log);
 //=> { name: 'tk', value: '159402.284291' }
@@ -32,4 +32,4 @@ token.get('Hello').then(console.log);
 
 ## Related
 
-- [`google-translate-api`](https://github.com/jerry-i/google-translate-api) – A **free** and **unlimited** API for Google Translate :dollar::no_entry_sign:
+- [`google-translate-api-plus`](https://github.com/jerry-i/google-translate-api-plus) – A **free** and **unlimited** API for Google Translate :dollar::no_entry_sign:
