@@ -1,4 +1,4 @@
-# google-translate-token-plus [![Build Status](https://travis-ci.org/jerry-i/google-translate-token.svg?branch=master)](https://travis-ci.org/jerry-i/google-translate-token-plus) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![Known Vulnerabilities](https://snyk.io/test/github/jerry-i/google-translate-token-plus/badge.svg)](https://snyk.io/test/github/jerry-i/google-translate-token-plus)
+# google-translate-token-plus [![Build Status](https://travis-ci.org/jerry-i/google-translate-token-plus.svg?branch=master)](https://travis-ci.org/jerry-i/google-translate-token-plus) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![Known Vulnerabilities](https://snyk.io/test/github/jerry-i/google-translate-token-plus/badge.svg)](https://snyk.io/test/github/jerry-i/google-translate-token-plus)
 
 A package that generates the necessary token to use the [**Google Translate API for free** :dollar::no_entry_sign:](https://github.com/jerry-i/google-translate-api-plus)
 
