@@ -81,11 +81,8 @@ function updateTKK() {
         if (Number(window.TKK.split('.')[0]) === now) {
             resolve();
         } else {
-            console.log('=====get translate site ====');
             got(url).then(function (res) {
                 var code = res.body.match(/TKK=(.*?)\(\)\)'\);/g);
-                console.log('==== translate fetched =====');
-                console.log(res);
                 if (code) {
                     eval(code[0]);
                     /* eslint-disable no-undef */
@@ -103,11 +100,8 @@ function updateTKK() {
 
                 resolve();
             }, e => {
-                console.error(e);
                 reject(e);
             }).catch(function (err) {
-                console.log('==== fetched err ===');
-                console.log(err);
                 var e = new Error();
                 e.code = 'BAD_NETWORK';
                 e.message = err.message;
