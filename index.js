@@ -8,6 +8,7 @@
 var got = require('got');
 var Configstore = require('configstore');
 
+var url;
 /* eslint-disable */
 // BEGIN
 
@@ -80,9 +81,11 @@ function updateTKK() {
         if (Number(window.TKK.split('.')[0]) === now) {
             resolve();
         } else {
-            got('https://translate.google.com').then(function (res) {
+            console.log('=====get translate site ====');
+            got(url).then(function (res) {
                 var code = res.body.match(/TKK=(.*?)\(\)\)'\);/g);
-
+                console.log('==== translate fetched =====');
+                console.log(res);
                 if (code) {
                     eval(code[0]);
                     /* eslint-disable no-undef */
@@ -99,7 +102,12 @@ function updateTKK() {
                  */
 
                 resolve();
+            }, e => {
+                console.error(e);
+                reject(e);
             }).catch(function (err) {
+                console.log('==== fetched err ===');
+                console.log(err);
                 var e = new Error();
                 e.code = 'BAD_NETWORK';
                 e.message = err.message;
@@ -119,4 +127,12 @@ function get(text) {
     });
 }
 
-module.exports.get = get;
+function token(net) {
+    net = net || 'com';
+    url = `https://translate.google.${net}`;
+    return {
+        get
+    };
+}
+
+module.exports = token;

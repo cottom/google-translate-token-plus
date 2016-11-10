@@ -1,5 +1,4 @@
 import test from 'ava';
-import {get as getToken} from './index';
 
 const browser = require('webdriverio').remote({
     user: process.env.SAUCE_USERNAME,
@@ -12,12 +11,16 @@ const browser = require('webdriverio').remote({
     }
 });
 
-test('check if what we generate equals to what translate.google.com generates', async t => {
+const token = require('./index')('cn');
+
+const getToken = token.get;
+
+test('check if what we generate equals to what translate.google.cn generates', async t => {
     try {
         const token = await getToken('hello');
         const returned = await browser
             .init()
-            .url('http://translate.google.com')
+            .url('http://translate.google.cn')
             .timeoutsAsyncScript(10000)
             .executeAsync((tokenName, callback) => {
                 setTimeout(function () {
@@ -45,7 +48,7 @@ test('check if what we generate equals to what translate.google.com generates', 
 
         t.is(token.value, returned.value);
     } catch (err) {
-        t.fail(err);
+        t.fail(err.message);
     } finally {
         browser.end();
     }

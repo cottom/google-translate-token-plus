@@ -28,9 +28,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matheuss/google-translate-tk/issues"
+    "url": "https://github.com/jerry-i/google-translate-tk/issues"
   },
-  "homepage": "https://github.com/matheuss/google-translate-tk#readme",
+  "homepage": "https://github.com/jerry-i/google-translate-tk#readme",
   "dependencies": {
     "configstore": "^2.0.0",
     "got": "^6.3.0"
