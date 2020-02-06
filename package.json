@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/jerry-i/google-translate-token-plus#readme",
   "dependencies": {
-    "configstore": "^2.0.0",
+    "configstore": "^5.0.0",
     "got": "^6.3.0"
   },
   "devDependencies": {
